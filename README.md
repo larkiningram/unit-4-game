@@ -1,2 +1,6 @@
 # unit-4-game
-homework 4: jquery
+University of Texas at Austin Coding Bootcamp: Homework 4 (Recommended)
+
+User will guess an answer using crystals.
+
+Launch using index.html
