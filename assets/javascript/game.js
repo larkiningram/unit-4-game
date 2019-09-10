@@ -17,46 +17,57 @@ function restart() {
     green = Math.floor(Math.random() * 9 + 1);
 };
 
+
 $(".tar-score").html(target);
 
-$(".red-crystal").on("click", function () {
-    score += red;
+function click() {
+    $(".red-crystal").on("click", function () {
+        score += red;
+        // console.log(score);
+        // console.log("red");
+        $(".u-score").html(score);
+    });
+
+    $(".blue-crystal").on("click", function () {
+        score += blue;
+        // console.log(score);
+        // console.log("blue");
+        $(".u-score").html(score);
+    });
+
+    $(".yellow-crystal").on("click", function () {
+        score += yellow;
+        // console.log(score);
+        // console.log("yellow");
+        $(".u-score").html(score);
+    });
+
+    $(".green-crystal").on("click", function () {
+        score += green;
+        // console.log(score);
+        // console.log("green");
+        $(".u-score").html(score);
+    });
     console.log(score);
-    console.log("red");
-    $(".u-score").html(score);
-});
+};
 
-$(".blue-crystal").on("click", function () {
-    score += blue;
-    console.log(score);
-    console.log("blue");
-    $(".u-score").html(score);
-});
+function game() {
+    if (target > score) {
+        click();
+    }
+    else if (score == target) {
+        wins++;
+        console.log("Win");
+        console.log(wins);
+        $(".wins").html("Wins: " + wins);
+        restart();
+    }
+    else {
+        losses++;
+        console.log("Loss");
+        $(".losses").html("Losses: " + losses);
+        restart();
+    }
+};
 
-$(".yellow-crystal").on("click", function () {
-    score += yellow;
-    console.log(score);
-    console.log("yellow");
-    $(".u-score").html(score);
-});
-
-$(".green-crystal").on("click", function () {
-    score += green;
-    console.log(score);
-    console.log("green");
-    $(".u-score").html(score);
-});
-
-
-if (score === target) {
-    wins++;
-    $(".wins").html("Wins: " + wins);
-    restart();
-}
-else if (score > target) {
-    losses++;
-    $(".losses").html("Losses: " + losses);
-    restart();
-}
-
-// $(".u-score").html(score);
+game();
