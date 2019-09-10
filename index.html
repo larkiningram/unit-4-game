@@ -18,73 +18,116 @@
 
 </head>
 
-<body class="bg-dark">
-    <div class="container my-2 mx-2">
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Crystal Collector</h1>
+            <!-- <p class="lead">
+                <strong>...</strong>
+            </p>
+            <hr class="my-4"> -->
+        </div>
+
+        <!-- start of row 1 -->
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card">
+                    <h5 class="card-header">Instructions</h5>
+                    <div class="card-body">
+                        <h5 class="card-title instruct"></h5>
+                        <p>You will be given a target score at the start of the game.
+                        </p>
+                        <p>
+                            There are four crystals below. By clicking on a crystal you will add a specific amount
+                            of points to your score.
+                        </p>
+                        You win the game by matching your total score to the target score, you lose the game if your
+                        total score goes above the target score.
+                        <p>
+                            The value of each crystal is hidden from you until you click on it.
+                        </p>
+                        <p>
+                            Each time the game starts, a new target score is generated and the crystal points
+                            change.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                    <div class="card">
+                        <h5 class="card-header">Game Tally</h5>
+                        <div class="card-body">
+                            <h5 class="card-title wins">Wins: </h5>
+                            <h5 class="card-title losses">Losses: </h5>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <!-- end of row 1 -->
+
+        <br>
+        <!-- start of row 2 -->
         <div class="row text-center">
-            <div class="col-lg-4 py-3 bg-warning text-white py-2">
-                <h1>Crystal Collector</h1>
+            <!-- col 1 of 3 -->
+            <div class="col-lg-3">
+                <div class="card">
+                    <h5 class="card-header">Target Score</h5>
+                    <div class="card-body">
+                        <h5 class="card-title tar-score py-5">...</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- col 2 of 3 -->
+            <div class="col-lg-3">
+                <div class="card ">
+                    <h5 class="card-header">User Score</h5>
+                    <div class="card-body">
+                        <h5 class="card-title u-score py-5">...</h5>
+                    </div>
+                </div>
+            </div>
+            <!-- col 3 of 3 -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <h5 class="card-header">Crystals</h5>
+                    <div class="card-body">
+                        <div class="row my-3">
+                            <div class="col-lg-3">
+                                <input type="image" class="red-crystal" src="assets/images/red.jpg" name="image"
+                                    width="100" height="100">
+                                <!-- <img class="red-crystal" src="assets/images/red.jpg" alt="red crystal" height="100px"> -->
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="image" class="blue-crystal" src="assets/images/blue.png" name="image"
+                                    width="100" height="100">
+                                <!-- <img class="blue-crystal" src="assets/images/blue.png" alt="blue crystal" height="100px"> -->
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="image" class="yellow-crystal" src="assets/images/yellow.jpg" name="image"
+                                    width="100" height="100">
+                                <!-- <img class="yellow-crystal" src="assets/images/yellow.jpg" alt="yellow crystal" height="100px"> -->
+                            </div>
+                            <div class="col-lg-3">
+                                <input type="image" class="green-crystal" src="assets/images/green.jpg" name="image"
+                                    width="100" height="100">
+                                <!-- <img class="green-crystal" src="assets/images/green.jpg" alt="green crystal" height="100px"> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row my-2">
-            <div class="col-lg-6 bg-light text-success py-2">
-                <p>
-                    <strong>Line 1</strong>
-                </p>
-                <p>
-                    <strong>Line 2</strong>
-                </p>
-                <p>
-                    <strong>Line 3</strong>
-                </p>
-                <p>
-                    <strong>Line 4</strong>
-                </p>
-                <p>
-                    <strong>Line 5</strong>
-                </p>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-lg-3 bg-success text-white py-5">
-                <h1 class="tar-score">...</h1>
-            </div>
-            <div class="col-lg-1 bg-info text-white pt-5 ml-2">
-                <span class="wins">Wins: </span>
-                <span class="losses">Losses: </span>
-            </div>
-        </div>
+        <!-- end of row 2 -->
+        <br>
+        <!-- start of row 3 -->
+        <div class="row">
 
-        <div class="row my-4">
-            <div class="col-lg-1 mr-3">
-                <input type="image" class="red-crystal" src="assets/images/red.jpg" name="image" width="100" height="100">
-                <!-- <img class="red-crystal" src="assets/images/red.jpg" alt="red crystal" height="100px"> -->
-            </div>
-            <div class="col-lg-1 mr-3">
-                <input type="image" class="blue-crystal" src="assets/images/blue.png" name="image" width="100" height="100">
-                <!-- <img class="blue-crystal" src="assets/images/blue.png" alt="blue crystal" height="100px"> -->
-            </div>
-            <div class="col-lg-1 mr-3">
-                <input type="image" class="yellow-crystal" src="assets/images/yellow.jpg" name="image" width="100" height="100">
-                <!-- <img class="yellow-crystal" src="assets/images/yellow.jpg" alt="yellow crystal" height="100px"> -->
-            </div>
-            <div class="col-lg-1">
-                <input type="image" class="green-crystal" src="assets/images/green.jpg" name="image" width="100" height="100">
-                <!-- <img class="green-crystal" src="assets/images/green.jpg" alt="green crystal" height="100px"> -->
-            </div>
-        </div>
-
-        <div class="row my-2">
-            <div class="col-lg-3 bg-success text-white py-2">
-                <p class="pt-2">Your total score is: </p>
-            </div>
-        </div>
-        <div class="row my-2">
-            <div class="col-lg-3 bg-success text-white py-5">
-                <h1 class="score"> ... </h1>
-            </div>
         </div>
 
     </div>
+
+
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 
 </body>
