@@ -15,17 +15,35 @@ function restart() {
     blue = Math.floor(Math.random() * 9 + 1);
     yellow = Math.floor(Math.random() * 9 + 1);
     green = Math.floor(Math.random() * 9 + 1);
+    $(".wins").html(wins);
+    $(".losses").html(losses);
+    $(".tar-score").html(target);
+    $(".u-score").html(score);
 };
 
+restart();
 
-$(".tar-score").html(target);
+function checker() {
+    if (score == target) {
+        wins++;
+        console.log("Win");
+        console.log(wins);
+        restart();
+    }
+    else if (score > target) {
+        losses++;
+        console.log("Loss");
+        restart();
+    }
+};
 
-function click() {
+function game() {
     $(".red-crystal").on("click", function () {
         score += red;
         // console.log(score);
         // console.log("red");
         $(".u-score").html(score);
+        checker();
     });
 
     $(".blue-crystal").on("click", function () {
@@ -33,6 +51,8 @@ function click() {
         // console.log(score);
         // console.log("blue");
         $(".u-score").html(score);
+        checker();
+
     });
 
     $(".yellow-crystal").on("click", function () {
@@ -40,6 +60,8 @@ function click() {
         // console.log(score);
         // console.log("yellow");
         $(".u-score").html(score);
+        checker();
+
     });
 
     $(".green-crystal").on("click", function () {
@@ -47,27 +69,12 @@ function click() {
         // console.log(score);
         // console.log("green");
         $(".u-score").html(score);
+        checker();
+
     });
     console.log(score);
 };
 
-function game() {
-    if (target > score) {
-        click();
-    }
-    else if (score == target) {
-        wins++;
-        console.log("Win");
-        console.log(wins);
-        $(".wins").html("Wins: " + wins);
-        restart();
-    }
-    else {
-        losses++;
-        console.log("Loss");
-        $(".losses").html("Losses: " + losses);
-        restart();
-    }
-};
+
 
 game();
