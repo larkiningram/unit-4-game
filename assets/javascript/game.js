@@ -2,19 +2,19 @@
 var wins = 0;
 var losses = 0;
 var score = 0;
-var target = Math.floor(Math.random() * 200 + 1);
-var red = Math.floor(Math.random() * 9 + 1);
-var blue = Math.floor(Math.random() * 9 + 1);
-var yellow = Math.floor(Math.random() * 9 + 1);
-var green = Math.floor(Math.random() * 9 + 1);
+var target = Math.floor(Math.random() * 101 + 19);;
+var red = Math.floor(Math.random() * 11 + 1);
+var blue = Math.floor(Math.random() * 11 + 1);
+var yellow = Math.floor(Math.random() * 11 + 1);
+var green = Math.floor(Math.random() * 11 + 1);
 
 function restart() {
     score = 0;
-    target = Math.floor(Math.random() * 200 + 1);
-    red = Math.floor(Math.random() * 9 + 1);
-    blue = Math.floor(Math.random() * 9 + 1);
-    yellow = Math.floor(Math.random() * 9 + 1);
-    green = Math.floor(Math.random() * 9 + 1);
+    target = Math.floor(Math.random() * 101 + 19);
+    red = Math.floor(Math.random() * 11 + 1);
+    blue = Math.floor(Math.random() * 11 + 1);
+    yellow = Math.floor(Math.random() * 11 + 1);
+    green = Math.floor(Math.random() * 11 + 1);
     $(".wins").html(wins);
     $(".losses").html(losses);
     $(".tar-score").html(target);
